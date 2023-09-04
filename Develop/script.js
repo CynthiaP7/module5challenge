@@ -29,5 +29,20 @@ $(document).ready(function() {
     }
   });
 
-})
+  //display current date
+
+  $('#currentDay').text(dayjs().format('MMMM DD, YYYY'));
+
+  $('.time-block').each(function () {
+    var hourId = $(this).attr('id');
+    var savedTask = localStorage.getItem(hourId);
+
+    if (savedTask) {
+      $(this).find('.description').val(savedTask);
+    }
+
+  });
+
+});
+
 
