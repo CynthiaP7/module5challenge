@@ -18,16 +18,21 @@ $(document).ready(function() {
   saveButtons.on('click', saveTask);
 
   //claases for time blocks
-  $('time-block').each(function (){
-    var hour = parseInt($(this).attr('id').split('-')[1]);
-    if (hour < currentHour) {
-      $(this).addClass('past');
+  $('.time-block').each(function (){
+    var hourId = parseInt($(this).attr('id').split('-')[1]);
+    if (hourId < currentHour) {
+      $(this).removeClass('present future').addClass('past');
     } else if (hour === currentHour) {
-      $(this).addClass('present');
+      $(this).addClass('present').removeClass('past future');
     } else {
-      $(this).addclass('future');
+      $(this).addClass('future').removeClass('past present');
     }
   });
+
+  var labelTime = dayjs().hour(hourId).format ('hA');
+  $(this).find('.hour').text(timeLabel);
+
+});
 
   //display current date
 
@@ -43,6 +48,6 @@ $(document).ready(function() {
 
   });
 
-});
+
 
 
