@@ -7,4 +7,5 @@ https://github.com/CynthiaP7/module5challenge
 Deployed page:
 https://cynthiap7.github.io/module5challenge/
 
+![image](https://github.com/CynthiaP7/module5challenge/assets/122586416/79c14e88-4dff-44a3-ac26-652aa49386d1)
 
